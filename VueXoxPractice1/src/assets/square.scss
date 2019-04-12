@@ -1,0 +1,67 @@
+div.container{
+    width: 30%;
+    height: 30%;
+    background-color: rgba(100,100,100,0.4);
+    border: solid black 1px;
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+    cursor: pointer;
+    .square {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: rgba(255,255, 255,0.8);
+        border-radius: 2px;
+        box-shadow:  0px 0px 15px 10px rgba(255,255, 255,0.8);
+        opacity: 0;
+        color: rgba(0,0,0, 0.3);
+        
+        &:hover{
+            opacity: 1;
+            color: rgba(0,0,0, 0.3);
+            width: 200px;
+            height: 150px;
+            //transition: opacity 0.5s;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        h1 {
+            font-size: 4.9em;
+            text-align: center;
+            vertical-align: middle;
+            position: relative;
+            bottom: 50px;
+            left: 45px;
+            user-select: none;
+            cursor: pointer;;
+        }
+        &.player{
+            &.O {
+                background-color: #ea87ff;
+            }
+            &.X {
+                background-color: #ffd26b;
+            }
+            width: 200px;
+            height: 150px;
+            box-shadow:  0px 0px 15px 10px rgba(255,255, 255,0.0);
+            border-radius: 5px;
+            color: rgba(0,0,0, 0.6);
+            opacity: 1;
+            transition: opacity 0.5s, color 1s, width 0.7s, height 0.5s, box-shadow 0.3s, background-color 1.2s;
+            &.highlighted {
+                background-color: #8cf442;
+                color: rgba(255, 0, 0, 0.356);
+                height: 150px;
+                width: 500px;
+                transition: background-color ease 2.5s, color 3.2s;
+                h1 {
+                    filter: hue-rotate(70deg);
+                }
+            }
+        }
+    }
+}
+
+
